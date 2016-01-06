@@ -5,3 +5,5 @@ This is a group project. Members:
 Arnav Mendiratta
 Nishant Nath
 Ahmet Can Ozbek
+
+![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
