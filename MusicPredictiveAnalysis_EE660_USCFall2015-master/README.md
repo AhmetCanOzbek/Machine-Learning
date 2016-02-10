@@ -7,4 +7,4 @@ Arnav Mendiratta
 Nishant Nath  
 Ahmet Can Ozbek  
 
-![alt tag](https://raw.githubusercontent.com/a-ozbek/Machine-Learning/master/MusicPredictiveAnalysis_EE660_USCFall2015-master/Reports/Results_And_Images/Confusion_Matrix_finaltest.png)
+![alt tag](https://github.com/a-ozbek/Machine-Learning/blob/master/MusicPredictiveAnalysis_EE660_USCFall2015-master/Reports/Results_And_Images/Confusion_Matrix_finaltest.png)
