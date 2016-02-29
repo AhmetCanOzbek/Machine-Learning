@@ -26,6 +26,4 @@ filtered_ecg = filter(b,1,ecg);
 %Compansate for the delay caused by filtering the signal
 filtered_ecg(1:delay) = [];
 
-
-
 end
