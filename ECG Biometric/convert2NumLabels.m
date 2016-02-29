@@ -8,4 +8,5 @@ function[number_ClassLabels] = convert2NumLabels(classLabels)
     for i=1:numberOfClasses
         number_ClassLabels(strcmp(classes{i},classLabels)) = i;    
     end
+
 end
