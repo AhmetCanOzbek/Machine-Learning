@@ -1,0 +1,53 @@
+Problematic ones:
+
+
+Columns 1 through 15
+
+     8    11    13    16    19    20    21    22    26    28    29    31    32    33    34
+
+  Column 16
+
+    37
+
+
+-----------------------------------------------------------------------------------------------
+m = -250; %m samples before R peak
+n = 250; %n samples after R peak
+n_of_fft_samples = 50;
+With pan tompkins filtering:
+Training Data
+Accuracy = 99.6825% (5024/5040) (classification)
+Testing Data
+Accuracy = 82.328% (778/945) (classification)
+
+*Result: gamma = 0.1 , c = 1000 , Accuracy = 79.0278 (CV)
+*Result: gamma = 0.1 , c = 100 , Accuracy = 78.9683 (CV)
+*model = svmtrain(num_train_label,train,'-v 5 -t 2 -c 1000 -g 0.01 -q');  -->  80.2976% (CV)
+*model = svmtrain(num_train_label,train,'-v 5 -t 2 -c 1000 -g 0.005 -q');  -->  80.7676% (CV)
+
+
+-----------------------------------------------------------------------------------------------
+
+filterOrder = 60;
+h_cutoff = 0.45; %Hz
+l_cutoff = 35; %Hz
+m = -250; %m samples before R peak
+n = 250; %n samples after R peak
+F_m = -80; %m samples before R peak (for FFT vector)
+F_n = +80; %n samples after R peak (for FFT vector)
+n_of_fft_samples = 50;
+%Initialize feature matrix and label
+n_of_features = ( abs(m-n)+1 + n_of_fft_samples ); %Dimensionality
+
+Training Data
+Accuracy = 94.7817% (4777/5040) (classification)
+Testing Data
+Accuracy = 90.3704% (854/945) (classification)
+
+
+
+model = svmtrain(num_train_label,train,'-t 2 -c 1000 -g 0.02 -q');
+Training Data
+Accuracy = 98.7302% (4976/5040) (classification)
+Testing Data
+Accuracy = 90.582% (856/945) (classification)

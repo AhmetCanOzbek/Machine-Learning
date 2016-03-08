@@ -34,7 +34,7 @@ threshold = 2.5 * mean(mcv);
 %Remove the windows with MCVs than higher than the threshold
 for i=1:n_of_windows
     if mcv(i) > threshold
-        disp(['window: ' num2str(i)]);
+        %disp(['window: ' num2str(i)]);
         ecg(window_number_ecg == i) = nan;
     end
 end

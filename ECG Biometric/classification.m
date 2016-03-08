@@ -1,4 +1,3 @@
-%Classification
 load train_test.mat
 
 num_train_label = convert2NumLabels(train_label);
@@ -46,8 +45,10 @@ num_test_label = convert2NumLabels(test_label);
 %   end
 % end
 
-
-model = svmtrain(num_train_label,train,'-t 2 -c 1000 -g 0.02 -b 1 -q');
+C = 1000;
+gamma = 0.02;
+disp(['SVM Parameters: ' 'C = ' num2str(C) ' , gamma = ' num2str(gamma)]);
+model = svmtrain(num_train_label,train,['-t 2 -c ' num2str(C) ' -g ' num2str(gamma) ' -b 1 -q']);
 disp('Training Data');
 [predicted_train_label, accuracy_train, prob_estimates_train] = svmpredict(num_train_label, train, model, '-b 1');
 

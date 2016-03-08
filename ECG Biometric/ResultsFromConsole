@@ -1,0 +1,600 @@
+diary on
+clc
+benchmark
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000
+*filterOrder = 60
+*h_cutoff = 0.45
+*l_cutoff = 30
+*m = -275
+*n = 265
+*F_m = -80
+*F_n = 80
+*n_of_fft_samples = 50
+Results:
+Training Data
+Accuracy = 99.0873% (4994/5040) (classification)
+Testing Data
+Accuracy = 91.1111% (861/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.5979%
+benchmark
+Benchmark script start.
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000
+*filterOrder = 60
+*h_cutoff = 0.45
+*l_cutoff = 40
+*m = -275
+*n = 265
+*F_m = -80
+*F_n = 80
+*n_of_fft_samples = 50
+Results:
+Training Data
+Accuracy = 99.6032% (5020/5040) (classification)
+Testing Data
+Accuracy = 91.4286% (864/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.0688%
+Done.
+diary off
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000
+*filterOrder = 60
+*h_cutoff = 0.45
+*l_cutoff = 40
+*m = -275
+*n = 265
+*F_m = -80
+*F_n = 80
+*n_of_fft_samples = 50
+Results:
+Training Data
+Accuracy = 99.6032% (5020/5040) (classification)
+Testing Data
+Accuracy = 91.4286% (864/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.0688%
+Done.
+ 
+plot(tpr_avg)
+grid on;
+clc
+diary off
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000
+*filterOrder = 60
+*h_cutoff = 0.45 Hz
+*l_cutoff = 44 Hz
+*m = -275
+*n = 265
+*F_m = -80
+*F_n = 80
+*n_of_fft_samples = 50
+Results:
+Training Data
+Accuracy = 99.7024% (5025/5040) (classification)
+Testing Data
+Accuracy = 92.2751% (872/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.1746%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000
+*filterOrder = 60
+*h_cutoff = 0.45 Hz
+*l_cutoff = 50 Hz
+*m = -275
+*n = 265
+*F_m = -80
+*F_n = 80
+*n_of_fft_samples = 50
+Results:
+Training Data
+Accuracy = 99.7619% (5028/5040) (classification)
+Testing Data
+Accuracy = 92.4868% (874/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.1746%
+Done.
+ 
+diary off
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000
+*filterOrder = 60
+*h_cutoff = 0.45 Hz
+*l_cutoff = 35 Hz
+*m = -275
+*n = 265
+*F_m = -80
+*F_n = 80
+*n_of_fft_samples = 50
+Results:
+Training Data
+Accuracy = 99.3452% (5007/5040) (classification)
+Testing Data
+Accuracy = 91.5344% (865/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.1746%
+Done.
+ 
+clc
+benchmark
+{Error: <a href="matlab: opentoline('/Users/ahmetcanozbek/Desktop/EE590/ecgProject/replicatePaper2/benchmark.m',101,35)">File: benchmark.m Line: 101 Column: 35
+</a>Unbalanced or unexpected parenthesis or bracket.
+} 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 60
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 50 (samples)
+Results:
+SVM Parameters: C = 1000 gamma = 0.02
+
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 60
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 50 (samples)
+Results:
+SVM Parameters: C = 1000 gamma = 0.02
+Training Data
+Accuracy = 99.2659% (5003/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.1467%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 60
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.3056% (5005/5040) (classification)
+Testing Data
+Accuracy = 91.5344% (865/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.0688%
+Done.
+ 
+diary off
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 70
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.3254% (5006/5040) (classification)
+Testing Data
+Accuracy = 91.9577% (869/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.963%
+Done.
+ 
+diary off
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.246% (5002/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.9333%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 80
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.3254% (5006/5040) (classification)
+Testing Data
+Accuracy = 92.0635% (870/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.0688%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.246% (5002/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.9333%
+Done.
+ 
+diary off
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 50 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.246% (5002/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.963%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 40 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.2262% (5001/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.0688%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -85 (samples)
+*F_n = 85 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.1468% (4997/5040) (classification)
+Testing Data
+Accuracy = 91.3228% (863/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.04%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -90 (samples)
+*F_n = 85 (samples)
+*n_of_fft_samples = 50 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.2063% (5000/5040) (classification)
+Testing Data
+Accuracy = 91.1111% (861/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.1373%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -120 (samples)
+*F_n = 100 (samples)
+*n_of_fft_samples = 60 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.3452% (5007/5040) (classification)
+Testing Data
+Accuracy = 87.9365% (831/945) (classification)
+Identification Error After Majority Vote: 0.015873
+EER: 3.7037%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -300 (samples)
+*n = 285 (samples)
+*F_m = -120 (samples)
+*F_n = 100 (samples)
+*n_of_fft_samples = 60 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.5238% (5016/5040) (classification)
+Testing Data
+Accuracy = 88.0423% (832/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.4133%
+Done.
+ 
+diary off
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.246% (5002/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.9333%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 40 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.6032% (5020/5040) (classification)
+Testing Data
+Accuracy = 91.4286% (864/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.0688%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 5 (Hz)
+*l_cutoff = 40 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.881% (5034/5040) (classification)
+Testing Data
+Accuracy = 91.746% (867/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 3.1746%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.246% (5002/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.9333%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 50 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.246% (5002/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.963%
+Done.
+ 
+benchmark
+*****Benchmark script start*****
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 265 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 45 (samples)
+Results:
+SVM Parameters: C = 1000 , gamma = 0.02
+Training Data
+Accuracy = 99.246% (5002/5040) (classification)
+Testing Data
+Accuracy = 91.6402% (866/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.9333%
+Done.
+ 
+diary off

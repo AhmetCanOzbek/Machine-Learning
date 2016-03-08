@@ -1,10 +1,6 @@
 clc; clear;
 load subjects_raw_data.mat
 
-% %Modify raw_ecg_subjects{20,1} (crop the beginning)
-% temp = raw_ecg_subjects{20,1};
-% raw_ecg_subjects{20,1} = temp(2500:end);
-
 %Construct the matrices
 %-80 hearbeats for training
 %-15 heartbeats for testing
@@ -15,18 +11,15 @@ numberOfTestBeats = 15;
 
 getFiles;
 %%
-%*Training
-%Create 'train'
-disp('Start constructing training matrix');
 Fs = 1000;
 filterOrder = 60;
 h_cutoff = 0.45; %Hz
 l_cutoff = 35; %Hz
-m = -250; %m samples before R peak
-n = 250; %n samples after R peak
+m = -275; %m samples before R peak
+n = 265; %n samples after R peak
 F_m = -80; %m samples before R peak (for FFT vector)
 F_n = +80; %n samples after R peak (for FFT vector)
-n_of_fft_samples = 50;
+n_of_fft_samples = 45;
 %Initialize feature matrix and label
 n_of_features = ( abs(m-n)+1 + n_of_fft_samples ); %Dimensionality
 %Allocate
@@ -36,7 +29,7 @@ test = zeros(63*15,n_of_features);
 test_label = cell(63*15,1);
 
 for i = 1:numberOfSubjects
-    disp(['Reading: Subject' num2str(i) ' FileName: ' fileNames{i,1}]);
+    %disp(['Reading: Subject' num2str(i) ' FileName: ' fileNames{i,1}]);
     ecg = raw_ecg_subjects{i,1};   
     %Remove noisy segments
     ecg = remove_noisy_segments(ecg,1000,1);    
@@ -93,7 +86,7 @@ disp('Test Matrix and Test Label Done.');
 %Normalize Train and Test
 %Iterate each column for the train and test
 for j=1:size(train,2)
-    disp(['Normalizing Column: ' num2str(j)]);
+    %disp(['Normalizing Column: ' num2str(j)]);
     %Normalize train
     [train(:,j),max_train,min_train] = normalize(train(:,j));
     %Normalize test
