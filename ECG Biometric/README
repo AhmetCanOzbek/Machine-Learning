@@ -4,9 +4,9 @@ Dataset: Recorded raw ECG signals of 63 subjects. (Publicly available CYBHi data
 Classification by Support Vector Machine (SVM). Tools used: LibSVM in Matlab
 
 Results: 
-*Training Data: Accuracy = 98.7302% (4976/5040) (classification)
-*Testing Data: Accuracy = 90.582% (856/945) (classification)
-*EER(Equal Error Rate) = 3.3862%
+*Training Data: Accuracy = 99.246% (5002/5040) (classification)
+*Testing Data: Accuracy = 91.6402% (866/945) (classification)
+*EER(Equal Error Rate) = 2.9333%
 
 ----------------------------------------------------------------------------
 Helper Functions: 
