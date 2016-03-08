@@ -1,3 +1,14 @@
+
+In this project we are using Electrocardiogram(ECG) signal as a biometric for person identification and authentication.
+Dataset: Recorded raw ECG signals of 63 subjects. (Publicly available CYBHi dataset)
+Classification by Support Vector Machine (SVM). Tools used: LibSVM in Matlab
+
+Results: 
+*Training Data: Accuracy = 98.7302% (4976/5040) (classification)
+*Testing Data: Accuracy = 90.582% (856/945) (classification)
+*EER(Equal Error Rate) = 3.3862%
+
+----------------------------------------------------------------------------
 Helper Functions: 
 *"remove_noisy_segments.m"
 *"normalize.m"
@@ -9,7 +20,7 @@ Scripts:
 
 "getMatrices.m": Reads the dataset files ands constucts training, testing feature matrices and training, testing labels. Writes these into train_test.mat file
 
-"classification.m": Performs classification (SVM) by using trainin and testing matrices created before and shows the result.
+"classification.m": Performs classification (SVM) by using training and testing matrices created before and shows the result.
 
 "eer.m": Calculates the Equal Error Rate(EER). and shows the result
 
