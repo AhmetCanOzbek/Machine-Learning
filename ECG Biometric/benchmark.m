@@ -24,10 +24,10 @@ n_of_fft_samples = 45;
 %Initialize feature matrix and label
 n_of_features = ( abs(m-n)+1 + n_of_fft_samples ); %Dimensionality
 %Allocate
-train = zeros(63*80,n_of_features);
-train_label = cell(63*80,1);
-test = zeros(63*15,n_of_features);
-test_label = cell(63*15,1);
+train = zeros(numberOfSubjects*numberOfTrainBeats,n_of_features);
+train_label = cell(numberOfSubjects*numberOfTrainBeats,1);
+test = zeros(numberOfSubjects*numberOfTestBeats,n_of_features);
+test_label = cell(numberOfSubjects*numberOfTestBeats,1);
 
 for i = 1:numberOfSubjects
     %disp(['Reading: Subject' num2str(i) ' FileName: ' fileNames{i,1}]);
@@ -41,33 +41,33 @@ for i = 1:numberOfSubjects
     filtered_ecg = filtered_ecg';
     
     %TRAIN Matrix
-    for j = 1:80          
+    for j = 1:numberOfTrainBeats          
         %Temporal Component: Crop R-m , R+n segment for each 80 heartbeat 
         %(Note: Starting from the second R peak (second heartbeat))        
         temporal_component = filtered_ecg(qrs_i_raw(j+2)+(m) : qrs_i_raw(j+2)+(n));
-        %Frequency Component (R-80, R+20)
+        %Frequency Component (R-F_m, R+F_n)
         frequency_component = abs(fft(filtered_ecg(qrs_i_raw(j+2)+(F_m) : qrs_i_raw(j+2)+(F_n)),n_of_fft_samples));        
         %put it into train matrix (cascade temporal component and frequency component)
-        train(80*(i-1) + j,:) = [temporal_component frequency_component];
+        train(numberOfTrainBeats*(i-1) + j,:) = [temporal_component frequency_component];
     end  
     
     %TEST Matrix
-    for j = 1:15       
+    for j = 1:numberOfTestBeats       
         %Temporal Component: Crop R-m , R+n segment for each 80 heartbeat 
         %(Note: Starting from the second R peak (second heartbeat))        
         temporal_component = filtered_ecg(qrs_i_raw(j+84)+(m) : qrs_i_raw(j+84)+(n));
-        %Frequency Component (R-80, R+20)
-        frequency_component = abs(fft(filtered_ecg(qrs_i_raw(j+84)-(80) : qrs_i_raw(j+84)+(20)),n_of_fft_samples));        
+        %Frequency Component (R-F_m, R+F_n)
+        frequency_component = abs(fft(filtered_ecg(qrs_i_raw(j+84)+(F_m) : qrs_i_raw(j+84)+(F_n)),n_of_fft_samples));        
         %put it into train matrix (cascade temporal component and frequency component)
-        test(15*(i-1) + j,:) = [temporal_component frequency_component];
+        test(numberOfTestBeats*(i-1) + j,:) = [temporal_component frequency_component];
     end       
 end
 
 %Create 'train_label'
 label_names = fileNames(:,2);
 for i = 1:numberOfSubjects
-    for j = 1:80
-        train_label{80*(i-1) + j,1} = label_names{i};
+    for j = 1:numberOfTrainBeats
+        train_label{numberOfTrainBeats*(i-1) + j,1} = label_names{i};
     end    
 end
 clear i; clear j;
@@ -77,8 +77,8 @@ disp('Train Matrix and Train Label Done.')
 %Create 'test_label'
 label_names = fileNames(:,2);
 for i = 1:numberOfSubjects
-    for j = 1:15
-        test_label{15*(i-1) + j,1} = label_names{i};
+    for j = 1:numberOfTestBeats
+        test_label{numberOfTestBeats*(i-1) + j,1} = label_names{i};
     end    
 end
 clear i; clear j;
@@ -97,6 +97,9 @@ end
 %Save the train, train_label, test, test_label
 save('train_test.mat','train','train_label','test','test_label');
 
+disp(['Number of Subjects: ' num2str(numberOfSubjects)]);
+disp(['Number of Train Beats: ' num2str(numberOfTrainBeats)]);
+disp(['Number of Test Beats: ' num2str(numberOfTestBeats)]);
 disp('Parameters:');
 disp(['*Fs = ' num2str(Fs) ' (Hz)']);
 disp(['*filterOrder = ' num2str(filterOrder)]);

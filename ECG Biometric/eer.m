@@ -1,4 +1,6 @@
 %Script for calculating EER (Equal Error Rate)
+%EER is calculated by the intersection of the ROC curve and the 
+%diagonal line from top-left corner to right-bottom corner
 
 %Parameters
 numberOfSubjects = 63;
@@ -16,6 +18,8 @@ identification_error = (sum(majority_predicted_test_label ~= majority_test_label
 disp(['Identification Error After Majority Vote: ' num2str(identification_error)]);
 
 
+%EER Calculation start
+%Constructing Target Matrix
 targets = [];
 for i=1:numberOfSubjects
     row = zeros(1,63); row(i) = 1;
@@ -26,6 +30,8 @@ targets = targets';
 outputs = prob_estimates_test';
 %plotroc(targets,outputs);
 
+%tpr: True Positive Rate
+%fpr; False Positive Rate
 [tpr,fpr,thresholds] = roc(targets,outputs);
 temp_tpr = [];
 for i=1:numberOfSubjects
@@ -38,6 +44,8 @@ plot(fpr{1},1-fpr{1},'g');
 legend('ROC curve', 'Diagonal Line');
 
 %Find the intersection of y1 and y2 (This will give the EER)
+%y1: ROC curve
+%y2: Diagonal Line
 x = fpr{1};
 y1 = tpr_avg;
 y2 = 1 - fpr{1};
