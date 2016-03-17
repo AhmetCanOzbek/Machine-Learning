@@ -1,7 +1,7 @@
 Results:
-By using SVM with RBF Kernel with parameters: gamma = 0.02 and C = 1000, the results on training and testing data is as follows:
-*Training Data: Accuracy = 99.246% (5002/5040) (classification)
-*Testing Data: Accuracy = 91.6402% (866/945) (classification)
+By using SVM with RBF Kernel with parameters: gamma = 0.02 and C = 1000, the results on training and testing data is as follows:  
+*Training Data: Accuracy = 99.246% (5002/5040) (classification)  
+*Testing Data: Accuracy = 91.6402% (866/945) (classification)  
 *EER(Equal Error Rate) = 2.9333%
 
 ![alt tag](https://github.com/a-ozbek/Machine-Learning/blob/master/ECG%20Biometric/trainTestEER.tif)
