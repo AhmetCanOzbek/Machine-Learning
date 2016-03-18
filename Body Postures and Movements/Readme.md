@@ -1,4 +1,4 @@
-In this project, I applied distribution free, statistical classifiers and support vector machine to correctly classify human activities (sitting-down, standing-up, standing, walking, and sitting) from the data collected by sensors positioned on the human subjects.(Human Activity Recognition) <br />
+In this project, Our goal is to correctly classify human activities (sitting-down, standing-up, standing, walking, and sitting) from the data collected by sensors positioned on the human subjects.(Human Activity Recognition) <br />
 
 LibSVM and PRtools are used in Matlab. <br />
 Dataset: 5 Classes, 18 Features <br />
