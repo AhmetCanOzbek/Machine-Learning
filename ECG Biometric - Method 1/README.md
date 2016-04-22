@@ -4,7 +4,7 @@ By using SVM with RBF Kernel with parameters: gamma = 0.02 and C = 1000, the res
 *Testing Data: Accuracy = 91.6402% (866/945) (classification)  
 *EER(Equal Error Rate) = 2.9333%
 
-![alt tag](https://github.com/a-ozbek/Machine-Learning/tree/master/ECG%20Biometric%20-%20Method%201/eer.png)
+![alt tag](https://github.com/a-ozbek/Machine-Learning/tree/master/ECG%20Biometric%20-%20Method%201eer.png)
 
 
 
