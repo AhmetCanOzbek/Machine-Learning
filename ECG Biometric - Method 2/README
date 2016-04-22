@@ -1,0 +1,19 @@
+Helper Functions: 
+*"remove_noisy_segments.m"
+*"normalize.m"
+*"filter_ecg.m"
+*"convert2NumLabels.m"
+
+
+Scripts:
+
+"getMatrices.m": Reads the dataset files ands constucts training, testing feature matrices and training, testing labels. Writes these into train_test.mat file
+
+"classification.m": Performs classification (SVM) by using trainin and testing matrices created before and shows the result.
+
+"eer.m": Calculates the Equal Error Rate(EER). and shows the result
+
+*"benchmark.m": Combination of the above three scripts, "getMatrices.m", "classification.m", "eer.m".
+
+To get the results, you can run either "benchmark.m" by itself or "getMatrices.m", "classification.m", "eer.m" in this order. 
+

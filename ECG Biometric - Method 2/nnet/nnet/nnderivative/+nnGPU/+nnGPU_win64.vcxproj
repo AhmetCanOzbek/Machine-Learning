@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="Build"
+         ToolsVersion="4.0">
+   <ItemGroup Label="ProjectConfigurations">
+      <ProjectConfiguration Include="Debug|x64">
+         <Configuration>Debug</Configuration>
+         <Platform>x64</Platform>
+      </ProjectConfiguration>
+      <ProjectConfiguration Include="Release|x64">
+         <Configuration>Release</Configuration>
+         <Platform>x64</Platform>
+      </ProjectConfiguration>
+   </ItemGroup>
+   <PropertyGroup Label="Globals">
+      <ProjectGuid>{D885CE75-D8B6-014B-6B1B-390479C0FEE4}</ProjectGuid>
+      <ProjectName>+nnGPU</ProjectName>
+      <Keyword>MakeFileProj</Keyword>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+   <PropertyGroup Label="Configuration">
+      <ConfigurationType>Makefile</ConfigurationType>
+   </PropertyGroup>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+   <ImportGroup Label="PropertySheets">
+      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"
+              Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')"
+              Label="LocalAppDataPlatform"/>
+      <Import Project="$(ProjectDir)\+nnGPU_win64.props"/>
+      <Import Project="$(SANDBOX_ROOT)\makerules\vsprops\win64\ARCH.props"/>
+      <Import Project="$(SANDBOX_ROOT)\makerules\vsprops\$(Configuration)GmakeVariables.props"/>
+      <Import Project="$(SANDBOX_ROOT)\makerules\vsprops\win64\GmakeBasedProject.props"/>
+   </ImportGroup>
+   <PropertyGroup Label="Globals">
+      <OutDir>.\</OutDir>
+      <IntDir>..\..\..\..\..\derived\win64\obj\toolbox\nnet\nnet\nnderivative\+nnGPU\</IntDir>
+   </PropertyGroup>
+   <PropertyGroup>
+      <NMakeBuildCommandLine>$(STANDARD_BUILD)</NMakeBuildCommandLine>
+      <NMakeReBuildCommandLine>$(STANDARD_REBUILD)</NMakeReBuildCommandLine>
+      <NMakeCleanCommandLine>$(STANDARD_CLEAN)</NMakeCleanCommandLine>
+      <NMakeOutput>.\+nnGPU.ptxw64</NMakeOutput>
+      <NMakePreprocessorDefinitions>BOOST_FILESYSTEM_VERSION=2;BOOST_CB_DISABLE_DEBUG;BOOST_ALL_NO_LIB;BOOST_ALL_DYN_LINK;BOOST_MOVE_USE_STANDARD_LIBRARY_MOVE;WIN32;_WIN32_WINNT=0x0503;WINVER=0x0503;_WIN32_IE=0x0600;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_SECURE_SCL=0;_MBCS;_WINDOWS;NDEBUG</NMakePreprocessorDefinitions>
+      <NMakeIncludeSearchPath>..\..\..\..\..\toolbox\nnet\nnet\nnderivative\+nnGPU;..\..\..\..\..\src\include;..\..\..\..\..\derived\win64\src\include;..\include;..\..\include;\\mathworks\hub\3rdparty\R2013b\468124\win64\boost\include\boost-1_49;\\mathworks\hub\3rdparty\R2013b\413704\win64\cpp11compat\include;\\mathworks\hub\3rdparty\R2013b\420793\win64\CUDA\include;..\..\..\..\..\msvc_headers</NMakeIncludeSearchPath>
+      <NMakeForcedIncludes/>
+      <AdditionalOptions>-DBOOST_FILESYSTEM_VERSION=2 -DBOOST_CB_DISABLE_DEBUG -DBOOST_ALL_NO_LIB -DBOOST_ALL_DYN_LINK -DBOOST_MOVE_USE_STANDARD_LIBRARY_MOVE -DWIN32 -D_WIN32_WINNT=0x0503 -DWINVER=0x0503 -D_WIN32_IE=0x0600 -D_CRT_SECURE_NO_DEPRECATE -D_SCL_SECURE_NO_DEPRECATE -D_CRT_NONSTDC_NO_DEPRECATE -D_SECURE_SCL=0 /D_MBCS /D_WINDOWS -FC -MD -Z7 -nologo -O2 -GS- -Oy- -DNDEBUG -W3 -wd4251 -wd4275 -wd4373 -wd4503 -wd4510 -wd4511 -wd4512 -wd4513 -wd4624 -w24056 -w24255 -w24545 -w24546 -w24547 -w24549 -w24928 -w34062 -w34232 -w34254 -w34263 -w34265 -w34287 -w34296 -w34946 -GR -EHs</AdditionalOptions>
+   </PropertyGroup>
+   <ItemGroup>
+      <ClCompile Include="bg_double.cu"/>
+      <ClCompile Include="bg_single.cu"/>
+      <ClCompile Include="perfs_double.cu"/>
+      <ClCompile Include="perfs_single.cu"/>
+      <ClCompile Include="yy_double.cu"/>
+      <ClCompile Include="yy_single.cu"/>
+   </ItemGroup>
+   <ItemGroup/>
+   <ItemGroup/>
+   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+</Project>

@@ -1,0 +1,44 @@
+Result: gamma = 1 , c = 50 , Accuracy = 80.9127
+
+
+Result: gamma = 0.5 , c = 200 , Accuracy = 81.2897
+
+
+
+Result: gamma = 2 , c = 10 , Accuracy = 85.6944
+Result: gamma = 2 , c = 50 , Accuracy = 85.7143
+
+
+***
+Train Matrix and Train Label Done.
+Test Matrix and Test Label Done.
+Applyting PCA, PCA dim = 30
+Mapping not provided.
+Number of Subjects: 63
+Number of Train Beats: 80
+Number of Test Beats: 15
+Parameters:
+*Fs = 1000 (Hz)
+*filterOrder = 75
+*h_cutoff = 0.45 (Hz)
+*l_cutoff = 35 (Hz)
+*m = -275 (samples)
+*n = 275 (samples)
+*F_m = -80 (samples)
+*F_n = 80 (samples)
+*n_of_fft_samples = 0 (samples)
+Results:
+SVM Parameters: C = 50 , gamma = 2
+Training Data
+Accuracy = 99.9008% (5035/5040) (classification)
+Testing Data
+Accuracy = 91.1111% (861/945) (classification)
+Identification Error After Majority Vote: 0
+EER: 2.4599%
+Done.
+***
+Result: gamma = 2.5 , c = 200 , Accuracy = 86.9643
+Result: gamma = 2.8 , c = 150 , Accuracy = 87.0437
+Result: gamma = 2.9 , c = 165 , Accuracy = 87.0635
+
+

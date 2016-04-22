@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+   <PropertyGroup>
+      <LocalDebuggerCommand>.\+nnGPU.ptxw32</LocalDebuggerCommand>
+      <LocalDebuggerEnvironment>PATH=$(SANDBOX_ROOT)\bin\win32;%PATH%</LocalDebuggerEnvironment>
+      <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+   </PropertyGroup>
+</Project>

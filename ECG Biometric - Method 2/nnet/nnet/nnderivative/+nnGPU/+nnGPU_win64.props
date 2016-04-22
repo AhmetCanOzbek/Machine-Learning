@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         DefaultTargets="Build"
+         ToolsVersion="4.0">
+   <PropertyGroup Label="UserMacros">
+      <MODULE_NAME>+nnGPU</MODULE_NAME>
+      <MODULE_ROOT>$(ProjectDir)</MODULE_ROOT>
+      <PRODUCT_NAME>nnet</PRODUCT_NAME>
+      <SANDBOX_ROOT>$(ProjectDir)..\..\..\..\..</SANDBOX_ROOT>
+      <NUM_THREADS>6</NUM_THREADS>
+      <GMAKE_OPTIONS>-C $(MODULE_ROOT) DISABLE_CREATE_VCXPROJ=1</GMAKE_OPTIONS>
+      <GMAKE_TARGET>build</GMAKE_TARGET>
+   </PropertyGroup>
+   <PropertyGroup>
+      <_PropertySheetDisplayName>+nnGPU (win64)</_PropertySheetDisplayName>
+   </PropertyGroup>
+   <ItemGroup>
+      <BuildMacro Include="MODULE_NAME">
+         <Value>$(MODULE_NAME)</Value>
+      </BuildMacro>
+      <BuildMacro Include="MODULE_ROOT">
+         <Value>$(MODULE_ROOT)</Value>
+      </BuildMacro>
+      <BuildMacro Include="PRODUCT_NAME">
+         <Value>$(PRODUCT_NAME)</Value>
+      </BuildMacro>
+      <BuildMacro Include="SANDBOX_ROOT">
+         <Value>$(SANDBOX_ROOT)</Value>
+      </BuildMacro>
+      <BuildMacro Include="NUM_THREADS">
+         <Value>$(NUM_THREADS)</Value>
+      </BuildMacro>
+      <BuildMacro Include="GMAKE_OPTIONS">
+         <Value>$(GMAKE_OPTIONS)</Value>
+      </BuildMacro>
+      <BuildMacro Include="GMAKE_TARGET">
+         <Value>$(GMAKE_TARGET)</Value>
+      </BuildMacro>
+   </ItemGroup>
+</Project>
